@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8" />
+	<title></title>
+	<style type="text/css">
+       ul li{float: left;width: 50px;height: 50px;border:1px solid #ccc;list-style: none;margin-right: 10px;text-align: center;line-height: 50px;}
+	</style>
+	<script type="text/javascript">
+       window.onload = function()
+       {
+       	 var oBtn = document.getElementById('btn');
+       	 var oUl = document.getElementById('ul');
+       	 var liBox = ['red','yellow','blue','green'];
+       	 oBtn.onclick = function()
+       	 {
+           
+       	 	for(var i=0 ; i<10 ; i++)
+       	 
+            {
+              	oUl.innerHTML += '<li style="background:'+liBox[i%liBox.length]+'">' + i + '</li>';
+                      //以求模的方式进行定义  'liBox[i % liBox.length]' 
+            }
+       	 }
+       }
+	</script>
+</head>
+<body>
+    <input type="button" value="自动生成10个Li" id="btn" />
+    <ul id="ul"></ul>
+</body>
+</html>
+<!-- 
+    this.className = 'active';用for进行遍历给每个元素设置活动状态
+
+
+ -->
